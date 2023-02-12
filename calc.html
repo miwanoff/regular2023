@@ -12,16 +12,16 @@
     <form name="forma1">
         Введите длину прямоугольника <input type="text" name="t1" size="10"><br />
         Введите ширину прямоугольника <input type="text" name="t2" size="10"><br />
-        <input type="button" name="button" value="Вычислить" onclick="areaRectangle();"><br />
+        <input type="button" name="button" value="Вычислить" onclick="areaRectangle(forma1);"><br />
         Площадь прямоугольника равна <input type="text" name="res" size="10">
     </form>
     <script>
 
-        function areaRectangle() {
-            let a = forma1.t1.value;
-            let b = forma1.t2.value;
+        function areaRectangle(f) {
+            let a = f.t1.value;
+            let b = f.t2.value;
             let s = a * b;
-            forma1.res.value = s;
+            f.res.value = s;
         }
     </script>
 </body>
