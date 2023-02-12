@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="forma1">
+        Введите длину прямоугольника <input type="text" name="t1" size="10"><br />
+        Введите ширину прямоугольника <input type="text" name="t2" size="10"><br />
+        <input type="button" name="button" value="Вычислить" onclick="areaRectangle();"><br />
+        Площадь прямоугольника равна <input type="text" name="res" size="10">
+    </form>
+    <script>
+
+        function areaRectangle() {
+            let a = document.forma1.t1.value;
+            let b = document.forma1.t2.value;
+            let s = a * b;
+            document.forma1.res.value = s;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="orderform" action="order.html" method="GET" onsubmit="return verify(this)">
+        Фамилия <input type="text" name="lname" size="15">
+      
+        Телефон <input type="text" name="phone" size="15">
+        <input type="submit" value="Задать" name="Go">
+    </form>
+    <script>
+        function verify(f) {
+
+            // проверка фамилии
+            if (f.lname.value.length == 0) {
+                alert('Введите фамилию');
+                f.lname.focus();
+                return false;
+            }
+
+
+
+            // проверка телефона
+            if (!f.phone.value.match(/^\s*(\+38)?-?(057)-?(\d{2}|\d{3})-?\d{2}-?\d{2}\s*$/)) {
+                alert('Введите правильный телефон');
+                f.phone.focus();
+                return false;
+            }
+            // если все было в порядке
+            return true;
+        }
+    </script>
+</body>
+
+</html>
